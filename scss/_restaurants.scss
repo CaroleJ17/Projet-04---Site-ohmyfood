@@ -1,0 +1,55 @@
+
+.restaurants-cards {
+    background-color: $bgGrey;
+    padding: 54px 18px 66px 17px;
+
+    & h3 {
+        padding: 0 80px 26px 20px;
+    }
+}
+
+.cards_list { 
+    width: 340px;
+    height: 251px;     
+    border-radius: 15px;       
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); 
+    margin-bottom: 18px;    
+        
+    & img {
+        width: 340px;
+        height: 174px; 
+        object-fit: cover;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;              
+    }
+
+    & h5 {          
+        font-family: Roboto;
+        font-size: 18px;
+        font-weight: 700; 
+        padding: 16px 0 5px 13px;      
+    }
+
+    & p { 
+        font-family: Roboto;      
+        font-size: 17px;
+        font-weight: 300;
+        padding: 0 0 12px 13px; 
+    }
+
+    .card_new {
+        width: 80px;
+        height: 29px;  
+        position: absolute;
+        right: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;                  
+        background-color: $bgGreen;
+        color: $colorGreen2;
+        font-size: 14px;     
+        border-radius: 2px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        margin: 10px 15px; 
+    }
+}

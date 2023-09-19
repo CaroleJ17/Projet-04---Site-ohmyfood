@@ -1,0 +1,56 @@
+
+.props-section {
+    display: flex;
+    flex-direction: column; 
+    margin-bottom: 48px; 
+    margin-left: -10px;   
+
+    & h3 {
+        padding: 43px 80px 26px 30px;
+    }
+      
+}
+   
+.props_list {
+    display: flex;    
+    align-items: center;
+    background: $bgGrey; 
+    width: 322px;
+    height: 72.4px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+    margin-bottom: 25px;     
+
+    & .fa-mobile-screen-button {
+        font-size: 20px;
+        color: $colorGrey3;    
+        margin: 0 27px 0 35px;
+    }
+
+    & .fa-list-ul {
+        font-size: 20px;
+        color: $colorGrey3;    
+        margin: 0 23px 0 34px;
+    }
+
+    & .fa-store {
+        font-size: 20px;
+        color: $colorGrey3;    
+        margin: 0 20px 0 35px;
+    }
+
+}
+
+.list_number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;       
+    background-color: #9356DC;
+    color: $colorWhite;
+    font-family: Roboto;
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;        
+    left: 20px;
+}
