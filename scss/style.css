@@ -203,22 +203,9 @@ h4 {
   height: 174px;
   -o-object-fit: cover;
      object-fit: cover;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  border-radius: 15px 15px 0 0;
 }
-.cards_list h5 {
-  font-family: Roboto;
-  font-size: 18px;
-  font-weight: 700;
-  padding: 16px 0 5px 13px;
-}
-.cards_list p {
-  font-family: Roboto;
-  font-size: 17px;
-  font-weight: 300;
-  padding: 0 0 12px 13px;
-}
-.cards_list .card_new {
+.cards_list span {
   width: 80px;
   height: 29px;
   position: absolute;
@@ -232,4 +219,19 @@ h4 {
   border-radius: 2px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   margin: 10px 15px;
+}
+.cards_list h5 {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 16px 0 5px 13px;
+}
+.cards_list p {
+  font-family: Roboto;
+  font-size: 17px;
+  font-weight: 300;
+  padding: 0 0 12px 13px;
+}
+.cards_list i {
+  font-size: 22px;
 }/*# sourceMappingURL=style.css.map */
