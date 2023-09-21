@@ -9,6 +9,7 @@
 }
 
 .cards_list { 
+    position: relative;
     width: 340px;
     height: 251px;     
     border-radius: 15px;       
@@ -22,10 +23,11 @@
         border-radius: 15px 15px 0 0;     
     }
 
-    & span {
+    & span {        
         width: 80px;
         height: 29px;  
         position: absolute;
+        top: 13px;
         right: 15px;              
         display: flex;
         justify-content: center;
@@ -34,8 +36,7 @@
         color: $colorGreen2;
         font-size: 14px;     
         border-radius: 2px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-        margin: 10px 15px; 
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);         
     }
 
     & h5 {          
@@ -53,6 +54,9 @@
     }
 
     & i {
+        position: absolute;
+        right: 25px;
+        bottom: 33px;
         font-size: 22px;       
     }    
 }
