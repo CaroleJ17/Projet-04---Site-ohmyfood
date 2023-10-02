@@ -58,11 +58,13 @@
         bottom: 33px;
         font-size: 22px;       
     }   
+
+    & i:hover {              
+        background: linear-gradient(to top, #FF79DA, #9356DC 90%); 
+        background-clip: text;       
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;           
+    }
 }
-
-
-
-
-
 
 

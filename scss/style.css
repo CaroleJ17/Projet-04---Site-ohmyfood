@@ -89,6 +89,12 @@ h4 {
   color: #353535;
   margin-right: 17px;
 }
+.location :hover {
+  cursor: pointer;
+  transition: all 0.8s ease-in-out;
+  background: linear-gradient(to bottom, #FF79DA, #9356DC 80%);
+  opacity: 0;
+}
 
 .restaurants {
   display: flex;
@@ -123,6 +129,12 @@ h4 {
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
   margin-bottom: 57px;
+}
+.restaurants .button:hover {
+  cursor: pointer;
+  transition-duration: 0.25s;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
 }
 .restaurants a {
   display: flex;
@@ -239,4 +251,42 @@ h4 {
   right: 25px;
   bottom: 33px;
   font-size: 22px;
+}
+.cards_list i:hover {
+  background: linear-gradient(to top, #FF79DA, #9356DC 90%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: #FFFFFF;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loader .loader_spinner {
+  border: 5px solid #9356DC;
+  width: 60px;
+  height: 60px;
+  border-top-color: black;
+  border-radius: 50%;
+  animation: spinner 3s linear infinite;
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }/*# sourceMappingURL=style.css.map */
