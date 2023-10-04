@@ -18,7 +18,14 @@
     height: 72.4px;
     border-radius: 20px;
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-    margin-bottom: 25px;     
+    margin-bottom: 25px;  
+    
+    & h4 {
+        color: $colorBlack;
+        font-family: Roboto;
+        font-size: 16px;    
+        font-weight: 700;   
+    }
 
     & .fa-mobile-screen-button {
         font-size: 20px;
