@@ -245,13 +245,13 @@ h3 {
   font-weight: 300;
   padding: 0 0 12px 13px;
 }
-.cards_list i {
+.cards_list .fa-regular.fa-heart {
   position: absolute;
   right: 25px;
   bottom: 33px;
   font-size: 22px;
 }
-.cards_list i:hover {
+.cards_list .fa-regular.fa-heart:hover {
   background: linear-gradient(to top, #FF79DA, #9356DC 90%);
   -webkit-background-clip: text;
           background-clip: text;
@@ -323,4 +323,16 @@ h3 {
   bottom: 15px;
   right: 15px;
   font-size: 16px;
+}
+.menu_list .fa-solid.fa-circle-check {
+  background-color: #99E2D0;
+  color: #FFFFFF;
+  font-size: 20px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  width: 59px;
+  height: 69px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }/*# sourceMappingURL=style.css.map */
