@@ -70,6 +70,9 @@
     } 
 
     & .fa-solid.fa-circle-check {
+        position: absolute;
+        right: 0;
+        top: 0;
         background-color: $colorGreen1;
         color: $colorWhite;
         font-size: 20px;
