@@ -259,6 +259,15 @@ h3 {
   font-weight: bold;
 }
 
+.header a {
+  position: absolute;
+  left: 25px;
+  color: #101010;
+  font-size: 25px;
+  animation-timing-function: ease-out;
+  animation-duration: 300ms;
+}
+
 .menu {
   padding: 0;
 }
@@ -289,7 +298,7 @@ h3 {
 
 .menu_list {
   position: relative;
-  padding: 0.75rem;
+  padding: 12px;
   background: #FFF;
   border-radius: 15px;
   margin-bottom: 15px;

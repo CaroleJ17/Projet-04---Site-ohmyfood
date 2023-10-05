@@ -1,3 +1,12 @@
+.header a {    
+    position: absolute;
+    left: 25px;
+    color: $colorBlack;
+    font-size: 25px;
+    animation-timing-function: ease-out;
+    animation-duration: 300ms;    
+}
+
 .menu {
     padding: 0;
 
@@ -26,13 +35,12 @@
     font-weight: 300;
     font-size: 16px;
     text-transform: uppercase;
-    margin-bottom: 20px;    
+    margin-bottom: 20px;     
 }
-
 
 .menu_list {
     position: relative;
-    padding: 0.75rem;
+    padding: 12px;
     background: $bgWhrite;
     border-radius: 15px;
     margin-bottom: 15px ;
@@ -60,9 +68,6 @@
         bottom: 15px;
         right: 15px;    
         font-size: 16px;   
-    }
-       
+    } 
+    
 }
-
-
-
