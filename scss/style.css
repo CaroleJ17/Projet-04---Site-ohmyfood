@@ -259,6 +259,36 @@ h3 {
   font-weight: bold;
 }
 
+.loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: #FFFFFF;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loader .loader_spinner {
+  border: 5px solid #9356DC;
+  width: 60px;
+  height: 60px;
+  border-top-color: black;
+  border-radius: 50%;
+  animation: spinner 3s linear infinite;
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 .header a {
   position: absolute;
   left: 25px;
@@ -293,6 +323,8 @@ h3 {
   font-size: 16px;
   text-transform: uppercase;
   margin: 40px 0 20px 0;
+  text-decoration: underline;
+  text-decoration-color: #99E2D0;
 }
 
 .menu_list {
@@ -338,4 +370,5 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
+  visibility: hidden;
 }/*# sourceMappingURL=style.css.map */
