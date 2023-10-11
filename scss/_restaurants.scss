@@ -50,21 +50,6 @@
         font-size: 17px;
         font-weight: 300;
         padding: 0 0 12px 13px; 
-    }
-
-    & .fa-regular.fa-heart {        
-        position: absolute;
-        right: 25px;
-        bottom: 33px;
-        font-size: 22px;       
-    }   
-
-    & .fa-regular.fa-heart:hover {                      
-        background: linear-gradient(to top, #FF79DA, #9356DC 90%); 
-        background-clip: text;       
-        -webkit-text-fill-color: transparent;
-        font-weight: bold;           
-    }
+    }    
 }
-
 

@@ -17,11 +17,5 @@
         color: $colorGrey;
         margin-right: 17px;
     }
-
-    & :hover { 
-        cursor: pointer;
-        transition: all .8s ease-in-out;
-        background: linear-gradient(to bottom, #FF79DA, #9356DC 80%);       
-        opacity: 0;    
-    }
+       
 }

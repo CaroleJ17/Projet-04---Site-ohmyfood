@@ -64,6 +64,45 @@ h3 {
   font-weight: 700;
 }
 
+.button {
+  width: 218px;
+  height: 50px;
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+  margin-bottom: 57px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-family: Roboto;
+  font-weight: 500;
+}
+
+.button:hover {
+  cursor: pointer;
+  transition-duration: 0.25s;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+}
+
+.fa-regular.fa-heart {
+  position: absolute;
+  right: 25px;
+  bottom: 30px;
+  font-size: 25px;
+}
+
+.fa-regular.fa-heart:hover {
+  cursor: pointer;
+  background: linear-gradient(to top, #FF79DA, #9356DC 90%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
 .location {
   display: flex;
   justify-content: center;
@@ -81,12 +120,6 @@ h3 {
 .location i {
   color: #353535;
   margin-right: 17px;
-}
-.location :hover {
-  cursor: pointer;
-  transition: all 0.8s ease-in-out;
-  background: linear-gradient(to bottom, #FF79DA, #9356DC 80%);
-  opacity: 0;
 }
 
 .restaurants {
@@ -114,29 +147,6 @@ h3 {
   font-weight: 300;
   text-align: center;
   margin-bottom: 18px;
-}
-
-.button {
-  width: 218px;
-  height: 50px;
-  border-radius: 25px;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-  background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
-  margin-bottom: 57px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  color: #FFFFFF;
-  font-family: Roboto;
-  font-weight: 500;
-}
-
-.button:hover {
-  cursor: pointer;
-  transition-duration: 0.25s;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
 }
 
 .props-section {
@@ -245,19 +255,6 @@ h3 {
   font-weight: 300;
   padding: 0 0 12px 13px;
 }
-.cards_list .fa-regular.fa-heart {
-  position: absolute;
-  right: 25px;
-  bottom: 33px;
-  font-size: 22px;
-}
-.cards_list .fa-regular.fa-heart:hover {
-  background: linear-gradient(to top, #FF79DA, #9356DC 90%);
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: bold;
-}
 
 .loader {
   position: fixed;
@@ -268,6 +265,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: loader-screen 4s forwards;
 }
 .loader .loader_spinner {
   border: 5px solid #9356DC;
@@ -275,18 +273,26 @@ h3 {
   height: 60px;
   border-top-color: black;
   border-radius: 50%;
-  animation: spinner 3s linear infinite;
+  animation: spinner 2s linear infinite;
 }
 
 @keyframes spinner {
   from {
     transform: rotate(0deg);
+    opacity: 1;
   }
   50% {
     transform: rotate(180deg);
+    opacity: 0.8;
   }
   to {
     transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+@keyframes loader-screen {
+  100% {
+    visibility: hidden;
   }
 }
 .header a {
@@ -315,6 +321,19 @@ h3 {
   font-family: "Shrikhand", cursive;
   font-weight: 500;
 }
+.menu .fa-regular.fa-heart {
+  top: 32px;
+  margin-right: 18px;
+}
+
+hr {
+  width: 40px;
+  height: 3px;
+  border-color: #99E2D0;
+  background-color: #99E2D0;
+  border: 3px;
+  margin-bottom: 12px;
+}
 
 .menu h4 {
   color: #101010;
@@ -322,9 +341,7 @@ h3 {
   font-weight: 300;
   font-size: 16px;
   text-transform: uppercase;
-  margin: 40px 0 20px 0;
-  text-decoration: underline;
-  text-decoration-color: #99E2D0;
+  margin: 40px 0 3px 0;
 }
 
 .menu_list {
@@ -371,4 +388,27 @@ h3 {
   align-items: center;
   justify-content: center;
   visibility: hidden;
+}
+
+.button_menu {
+  width: 186px;
+  margin: 40px auto 0;
+  height: 50px;
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-family: Roboto;
+  font-weight: 500;
+}
+
+.button_menu:hover {
+  cursor: pointer;
+  transition-duration: 0.25s;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
 }/*# sourceMappingURL=style.css.map */
