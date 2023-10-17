@@ -48,6 +48,15 @@
   width: 25px;
 }
 
+@media screen and (min-width: 1024px) {
+  .footer ul,
+  h6 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 30px;
+  }
+}
 * {
   margin: 0;
 }
@@ -129,7 +138,6 @@ h3 {
   align-items: center;
 }
 .restaurants h2 {
-  width: 275px;
   height: 68px;
   text-align: center;
   margin-top: 30px;
@@ -139,7 +147,6 @@ h3 {
   font-weight: 700;
 }
 .restaurants p {
-  width: 315px;
   height: 46px;
   color: #353535;
   font-family: Roboto;
@@ -324,6 +331,7 @@ h3 {
 .menu .fa-regular.fa-heart {
   top: 32px;
   margin-right: 18px;
+  height: 25px;
 }
 
 hr {
@@ -344,7 +352,7 @@ hr {
   margin: 40px 0 3px 0;
 }
 
-.menu_list {
+.plates_cards {
   position: relative;
   padding: 12px;
   background: #FFF;
@@ -353,28 +361,45 @@ hr {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
-.menu_list h5 {
+.plates_cards h5 {
   color: #101010;
   font-family: Roboto;
   font-weight: 900;
   font-size: 18px;
   margin-bottom: 5px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-.menu_list p {
+.plates_cards p {
   color: #101010;
   font-family: Roboto;
   font-weight: 300;
   font-size: 15px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-.menu_list .plate_price {
-  position: absolute;
-  bottom: 15px;
-  right: 15px;
+.plates_cards .plates_price {
+  color: #101010;
+  font-family: Roboto;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 15px;
+  margin-top: -20px;
   font-size: 16px;
+  font-weight: 700;
 }
-.menu_list .fa-solid.fa-circle-check {
+.plates_cards .fa-solid.fa-circle-check {
+  display: none;
+}
+.plates_cards:hover .fa-solid.fa-circle-check {
   position: absolute;
+  height: 100%;
+  width: 65px;
+  border: 0;
   right: 0;
   top: 0;
   background-color: #99E2D0;
@@ -387,7 +412,47 @@ hr {
   display: flex;
   align-items: center;
   justify-content: center;
-  visibility: hidden;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+
+.plates-cards {
+  position: relative;
+  overflow: hidden;
+}
+
+.plates_cards .check {
+  border: 0;
+  position: absolute;
+  top: 0px;
+  right: -100px;
+  background-color: #99e2d0;
+  height: 100%;
+  width: 65px;
+  border-radius: 0 20px 20px 0;
+  transition-duration: 0.55s;
+}
+
+.plates_cards .check .fa-circle-check {
+  color: white;
+  transform: rotate(220deg);
+  transition-duration: 0.6s;
+}
+
+.plates_cards:hover {
+  cursor: pointer;
+}
+
+.plates_cards:hover .check {
+  right: 0;
+}
+
+.plates_cards:hover .fa-circle-check {
+  transform: rotate(0deg);
+}
+
+.plates_cards:hover strong {
+  margin-right: 60px;
 }
 
 .button_menu {
@@ -396,7 +461,7 @@ hr {
   height: 50px;
   border-radius: 25px;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-  background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+  background: var(--Button-Gradient, linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%));
   display: flex;
   justify-content: center;
   align-items: center;
@@ -410,5 +475,5 @@ hr {
   cursor: pointer;
   transition-duration: 0.25s;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356dc -5.2%, #ff79da 110.74%);
 }/*# sourceMappingURL=style.css.map */

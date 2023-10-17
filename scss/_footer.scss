@@ -1,34 +1,44 @@
 .footer {
-    background: $colorGrey;
-    color: $colorWhite;
-    display: flex;           
+  background: $colorGrey;
+  color: $colorWhite;
+  display: flex;
+  flex-direction: column;
+  padding: 22px 25px;
+  gap: 16px;
+
+  & h6 {
+    font-family: Shrikhand;
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  & ul {
+    display: flex;
     flex-direction: column;
-    padding: 22px 25px;     
-    gap: 16px;
+    list-style: none;
+    gap: 7px;
+    padding: 0;
+  }
 
-    & h6 {     
-      font-family: Shrikhand;
-      font-size: 18px;      
-      font-weight: 400;                          
-    }
+  & a {
+    color: $colorWhite;
+    text-decoration: none;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+  }
 
-    & ul {        
-        display: flex;
-        flex-direction: column;         
-        list-style: none;              
-        gap: 7px;
-        padding: 0;
-    }
-    
-    & a {
-        color: $colorWhite;
-        text-decoration: none; 
-        font-family: Roboto;
-        font-size: 16px;    
-        font-weight: 500;       
-    }
+  & i {
+    width: 25px;
+  }
+}
 
-    & i {
-        width: 25px;               
-    }
+@include desktop {
+  .footer ul,
+  h6 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 30px;
+  }
 }

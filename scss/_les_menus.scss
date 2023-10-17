@@ -1,127 +1,194 @@
-.header a {    
-    position: absolute;
-    left: 25px;
-    color: $colorBlack;
-    font-size: 25px;
-    animation-timing-function: ease-out;
-    animation-duration: 300ms;    
+.header a {
+  position: absolute;
+  left: 25px;
+  color: $colorBlack;
+  font-size: 25px;
+  animation-timing-function: ease-out;
+  animation-duration: 300ms;
 }
 
 .menu {
-    padding: 0;
+  padding: 0;
 
-    & .banner_img {
-        width: 100%;   
-    }
+  & .banner_img {
+    width: 100%;
+  }
 
-    & .content_menu {        
-        position: relative;
-        border-radius: 40px 40px 0 0;
-        background-color: $bgGrey;
-        margin-top: -64px;        
-        padding: 31px 17px 40px 17px;
-    }
+  & .content_menu {
+    position: relative;
+    border-radius: 40px 40px 0 0;
+    background-color: $bgGrey;
+    margin-top: -64px;
+    padding: 31px 17px 40px 17px;
+  }
 
-    & .title_menu {   
-        font-family: "Shrikhand",cursive;
-        font-weight: 500;        
-    }
+  & .title_menu {
+    font-family: "Shrikhand", cursive;
+    font-weight: 500;
+  }
 
-    & .fa-regular.fa-heart {
-        top: 32px;       
-        margin-right: 18px;
-    }    
+  & .fa-regular.fa-heart {
+    top: 32px;
+    margin-right: 18px;
+    height: 25px;
+  }
 }
 
-hr {    
-    width: 40px;
-    height: 3px;
-    border-color: $colorGreen1;
-    background-color: $colorGreen1;
-    border: 3px;
-    margin-bottom: 12px;
-    
-    }
-   
+hr {
+  width: 40px;
+  height: 3px;
+  border-color: $colorGreen1;
+  background-color: $colorGreen1;
+  border: 3px;
+  margin-bottom: 12px;
+}
+
 .menu h4 {
+  color: $colorBlack;
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin: 40px 0 3px 0;
+}
+
+.plates_cards {
+  position: relative;
+  padding: 12px;
+  background: $bgWhrite;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  & h5 {
+    color: $colorBlack;
+    font-family: Roboto;
+    font-weight: 900;
+    font-size: 18px;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  & p {
     color: $colorBlack;
     font-family: Roboto;
     font-weight: 300;
+    font-size: 15px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  & .plates_price {
+    color: $colorBlack;
+    font-family: Roboto;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 15px;
+    margin-top: -20px;
     font-size: 16px;
-    text-transform: uppercase;
-    margin: 40px 0 3px 0; 
+    font-weight: 700;
+  }
+
+  & .fa-solid.fa-circle-check {
+    display: none;
+  }
+
+  &:hover {
+    & .fa-solid.fa-circle-check {
+      position: absolute;
+      height: 100%;
+      width: 65px;
+      border: 0;
+      right: 0;
+      top: 0;
+      background-color: $colorGreen1;
+      color: $colorWhite;
+      font-size: 20px;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+      width: 59px;
+      height: 69px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition-duration: 0.5s;
+    }
+  }
 }
 
-.menu_list {
-    position: relative;
-    padding: 12px;
-    background: $bgWhrite;
-    border-radius: 15px;
-    margin-bottom: 15px ;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-    display: flex;
-    flex-direction: column; 
+.plates-cards {
+  position: relative;
+  overflow: hidden;
+}
 
-    & h5 {
-        color: $colorBlack;
-        font-family: Roboto;
-        font-weight: 900;
-        font-size: 18px;
-        margin-bottom: 5px;
-    }
+.plates_cards .check {
+  border: 0;
+  position: absolute;
+  top: 0px;
+  right: -100px;
+  background-color: #99e2d0;
+  height: 100%;
+  width: 65px;
+  border-radius: 0 20px 20px 0;
+  transition-duration: 0.55s;
+}
 
-    & p {
-        color: $colorBlack;
-        font-family: Roboto;
-        font-weight: 300;
-        font-size: 15px;
-    }
+.plates_cards .check .fa-circle-check {
+  color: white;
+  transform: rotate(220deg);
+  transition-duration: 0.6s;
+}
 
-    & .plate_price {       
-        position: absolute;
-        bottom: 15px;
-        right: 15px;    
-        font-size: 16px;   
-    } 
+.plates_cards:hover {
+  cursor: pointer;
+}
 
-    & .fa-solid.fa-circle-check {        
-        position: absolute;
-        right: 0;
-        top: 0;
-        background-color: $colorGreen1;
-        color: $colorWhite;
-        font-size: 20px;
-        border-top-right-radius: 15px;
-        border-bottom-right-radius: 15px;
-        width: 59px;
-        height: 69px;
-        display: flex;
-        align-items: center;
-        justify-content: center; 
-        visibility: hidden;    
-    }
+.plates_cards:hover .check {
+  right: 0;
+}
+
+.plates_cards:hover .fa-circle-check {
+  transform: rotate(0deg);
+}
+
+.plates_cards:hover strong {
+  margin-right: 60px;
 }
 
 .button_menu {
-    width: 186px;
-    margin: 40px auto 0;
-    height: 50px;
-    border-radius: 25px;
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-    background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: $colorWhite; 
-    font-family: Roboto;      
-    font-weight: 500; 
+  width: 186px;
+  margin: 40px auto 0;
+  height: 50px;
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  background: var(
+    --Button-Gradient,
+    linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%)
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: $colorWhite;
+  font-family: Roboto;
+  font-weight: 500;
 }
 
 .button_menu:hover {
-    cursor: pointer;
-    transition-duration: 0.25s;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+  cursor: pointer;
+  transition-duration: 0.25s;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(255, 255, 255, 0.15) 100%
+    ),
+    linear-gradient(201deg, #9356dc -5.2%, #ff79da 110.74%);
 }
-

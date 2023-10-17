@@ -46,7 +46,7 @@ h3 {
 
 .fa-regular.fa-heart:hover { 
     cursor: pointer;                     
-    background: linear-gradient(to top, #FF79DA, #9356DC 90%); 
+    background: linear-gradient(to top, $colorSecondary, $colorPrimary 90%); 
     background-clip: text;       
     -webkit-text-fill-color: transparent;
     font-weight: bold;           
