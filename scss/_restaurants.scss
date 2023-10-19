@@ -1,55 +1,81 @@
 .restaurants-cards {
-    background-color: $bgGrey;
-    padding: 54px 18px 66px 17px;
+  background-color: $bgGrey;
+  padding: 54px 18px 66px 17px;
 
-    & h3 {
-        padding: 0 80px 26px 20px;
-    }
+  & h3 {
+    padding: 0 80px 26px 20px;
+  }
 }
 
-.cards_list { 
-    position: relative;
+.cards_list {
+  position: relative;
+  width: 340px;
+  height: 251px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  margin-bottom: 18px;
+
+  & img {
     width: 340px;
-    height: 251px;     
-    border-radius: 15px;       
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); 
-    margin-bottom: 18px;    
-        
-    & img {        
-        width: 340px;
-        height: 174px;         
-        object-fit: cover;
-        border-radius: 15px 15px 0 0;     
-    }
+    height: 174px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+  }
 
-    & span {        
-        width: 80px;
-        height: 29px;  
-        position: absolute;
-        top: 13px;
-        right: 15px;              
-        display: flex;
-        justify-content: center;
-        align-items: center;                  
-        background-color: $bgGreen;
-        color: $colorGreen2;
-        font-size: 14px;     
-        border-radius: 2px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);         
-    }
+  & span {
+    width: 80px;
+    height: 29px;
+    position: absolute;
+    top: 13px;
+    right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $bgGreen;
+    color: $colorGreen2;
+    font-size: 14px;
+    border-radius: 2px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  }
 
-    & h5 {          
-        font-family: Roboto;
-        font-size: 18px;
-        font-weight: 700; 
-        padding: 16px 0 5px 13px;      
-    }
+  & h5 {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 16px 0 5px 13px;
+  }
 
-    & p { 
-        font-family: Roboto;      
-        font-size: 17px;
-        font-weight: 300;
-        padding: 0 0 12px 13px; 
-    }    
+  & p {
+    font-family: Roboto;
+    font-size: 17px;
+    font-weight: 300;
+    padding: 0 0 12px 13px;
+  }
 }
 
+@include desktop {
+  .restaurants-cards {
+    padding: 30px 180px;
+  }
+
+  .restaurants-cards h3 {
+    padding: 0 0 28px 0;
+  }
+
+  .cards_body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px;
+  }
+
+  .cards_list {
+    width: 490px;
+    height: 251px;
+    margin-bottom: 0;
+  }
+
+  .cards_list .card_img {
+    width: 490px;
+  }
+}

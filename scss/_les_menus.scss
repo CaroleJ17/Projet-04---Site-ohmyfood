@@ -34,6 +34,35 @@
   }
 }
 
+@include desktop {
+  .menu .banner_img {
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .menu .content_menu {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -40px;
+  }
+
+  .menu .title_menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu .fa-regular.fa-heart {
+    right: 420px;
+    top: 34px;
+  }
+
+  .content_cards {
+    margin-left: 250px;
+  }
+}
+
 hr {
   width: 40px;
   height: 3px;
@@ -54,7 +83,7 @@ hr {
 
 .plates_cards {
   position: relative;
-  padding: 12px;
+  padding: 15px;
   background: $bgWhrite;
   border-radius: 15px;
   margin-bottom: 15px;
@@ -69,9 +98,9 @@ hr {
     font-weight: 900;
     font-size: 18px;
     margin-bottom: 5px;
-    white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    white-space: nowrap;
   }
 
   & p {
@@ -79,9 +108,9 @@ hr {
     font-family: Roboto;
     font-weight: 300;
     font-size: 15px;
-    white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    white-space: nowrap;
   }
 
   & .plates_price {
@@ -89,7 +118,6 @@ hr {
     font-family: Roboto;
     display: flex;
     justify-content: flex-end;
-    margin-right: 15px;
     margin-top: -20px;
     font-size: 16px;
     font-weight: 700;
@@ -101,10 +129,9 @@ hr {
 
   &:hover {
     & .fa-solid.fa-circle-check {
-      position: absolute;
-      height: 100%;
       width: 65px;
-      border: 0;
+      height: 100%;
+      position: absolute;
       right: 0;
       top: 0;
       background-color: $colorGreen1;
@@ -112,20 +139,12 @@ hr {
       font-size: 20px;
       border-top-right-radius: 15px;
       border-bottom-right-radius: 15px;
-      width: 59px;
-      height: 69px;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      transition-duration: 0.5s;
     }
   }
-}
-
-.plates-cards {
-  position: relative;
-  overflow: hidden;
 }
 
 .plates_cards .check {
@@ -141,21 +160,11 @@ hr {
 }
 
 .plates_cards .check .fa-circle-check {
-  color: white;
-  transform: rotate(220deg);
   transition-duration: 0.6s;
-}
-
-.plates_cards:hover {
-  cursor: pointer;
 }
 
 .plates_cards:hover .check {
   right: 0;
-}
-
-.plates_cards:hover .fa-circle-check {
-  transform: rotate(0deg);
 }
 
 .plates_cards:hover strong {
@@ -191,4 +200,10 @@ hr {
       rgba(255, 255, 255, 0.15) 100%
     ),
     linear-gradient(201deg, #9356dc -5.2%, #ff79da 110.74%);
+}
+
+@include desktop {
+  .plates_cards {
+    width: 604px;
+  }
 }

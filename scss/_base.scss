@@ -1,53 +1,67 @@
 * {
-    margin: 0;    
+  margin: 0;
 }
 
 .main-container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 h3 {
-    color: $colorBlack;
-    font-family: Roboto;
-    font-size: 24px;    
-    font-weight: 700;    
+  color: $colorBlack;
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: 700;
 }
 
 .button {
-    width: 218px;
-    height: 50px;
-    border-radius: 25px;
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-    background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
-    margin-bottom: 57px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: $colorWhite; 
-    font-family: Roboto;      
-    font-weight: 500;  
-} 
-
-.button:hover {
-    cursor: pointer;
-    transition-duration: 0.25s;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);       
+  width: 218px;
+  height: 50px;
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  background: var(
+    --Button-Gradient,
+    linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%)
+  );
+  margin-bottom: 57px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: $colorWhite;
+  font-family: Roboto;
+  font-weight: 500;
 }
 
-.fa-regular.fa-heart {        
-    position: absolute;
-    right: 25px;
-    bottom: 30px;
-    font-size: 25px;
-}       
+.button:hover {
+  cursor: pointer;
+  transition-duration: 0.25s;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(255, 255, 255, 0.15) 100%
+    ),
+    linear-gradient(201deg, #9356dc -5.2%, #ff79da 110.74%);
+}
 
-.fa-regular.fa-heart:hover { 
-    cursor: pointer;                     
-    background: linear-gradient(to top, $colorSecondary, $colorPrimary 90%); 
-    background-clip: text;       
-    -webkit-text-fill-color: transparent;
-    font-weight: bold;           
+.fa-regular.fa-heart {
+  position: absolute;
+  right: 25px;
+  bottom: 30px;
+  font-size: 25px;
+}
+
+.fa-regular.fa-heart:hover {
+  cursor: pointer;
+  background: linear-gradient(to top, $colorSecondary, $colorPrimary 90%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+@include desktop {
+  .button {
+    margin: 0 0 30px 0;
+  }
 }

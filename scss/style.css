@@ -19,7 +19,7 @@
 
 .footer {
   background: #353535;
-  color: #FFFFFF;
+  color: #ffffff;
   display: flex;
   flex-direction: column;
   padding: 22px 25px;
@@ -38,7 +38,7 @@
   padding: 0;
 }
 .footer a {
-  color: #FFFFFF;
+  color: #ffffff;
   text-decoration: none;
   font-family: Roboto;
   font-size: 16px;
@@ -49,12 +49,21 @@
 }
 
 @media screen and (min-width: 1024px) {
-  .footer ul,
-  h6 {
+  .footer {
     display: flex;
+    flex-direction: row-reverse;
+    padding: 50px 50px 20px 25px;
+    align-items: center;
+  }
+  .footer ul {
     flex-direction: row;
-    justify-content: flex-end;
-    gap: 30px;
+    gap: 10px;
+  }
+  .footer h6 {
+    margin-left: 30px;
+  }
+  .footer a {
+    margin-right: 15px;
   }
 }
 * {
@@ -78,13 +87,13 @@ h3 {
   height: 50px;
   border-radius: 25px;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-  background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+  background: var(--Button-Gradient, linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%));
   margin-bottom: 57px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  color: #FFFFFF;
+  color: #ffffff;
   font-family: Roboto;
   font-weight: 500;
 }
@@ -93,7 +102,7 @@ h3 {
   cursor: pointer;
   transition-duration: 0.25s;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356dc -5.2%, #ff79da 110.74%);
 }
 
 .fa-regular.fa-heart {
@@ -105,18 +114,23 @@ h3 {
 
 .fa-regular.fa-heart:hover {
   cursor: pointer;
-  background: linear-gradient(to top, #FF79DA, #9356DC 90%);
+  background: linear-gradient(to top, #ff79da, #9356dc 90%);
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
 }
 
+@media screen and (min-width: 1024px) {
+  .button {
+    margin: 0 0 30px 0;
+  }
+}
 .location {
   display: flex;
   justify-content: center;
   height: 50px;
-  background: #EAEAEA;
+  background: #eaeaea;
   align-items: center;
 }
 .location address {
@@ -133,7 +147,7 @@ h3 {
 
 .restaurants {
   display: flex;
-  background: #F6F6F6;
+  background: #f6f6f6;
   flex-direction: column;
   align-items: center;
 }
@@ -156,6 +170,11 @@ h3 {
   margin-bottom: 18px;
 }
 
+@media screen and (min-width: 1024px) {
+  .restaurants p {
+    margin-bottom: 0;
+  }
+}
 .props-section {
   display: flex;
   flex-direction: column;
@@ -169,7 +188,7 @@ h3 {
 .props_list {
   display: flex;
   align-items: center;
-  background: #F6F6F6;
+  background: #f6f6f6;
   width: 322px;
   height: 72.4px;
   border-radius: 20px;
@@ -184,18 +203,21 @@ h3 {
 }
 .props_list .fa-mobile-screen-button {
   font-size: 20px;
-  color: #7E7E7E;
+  color: #7e7e7e;
   margin: 0 27px 0 35px;
 }
 .props_list .fa-list-ul {
   font-size: 20px;
-  color: #7E7E7E;
+  color: #7e7e7e;
   margin: 0 23px 0 34px;
 }
 .props_list .fa-store {
   font-size: 20px;
-  color: #7E7E7E;
+  color: #7e7e7e;
   margin: 0 20px 0 35px;
+}
+.props_list i:hover {
+  color: #9356dc;
 }
 
 .list_number {
@@ -203,8 +225,8 @@ h3 {
   justify-content: center;
   align-items: center;
   position: absolute;
-  background-color: #9356DC;
-  color: #FFFFFF;
+  background-color: #9356dc;
+  color: #ffffff;
   font-family: Roboto;
   border-radius: 50%;
   height: 24px;
@@ -212,8 +234,29 @@ h3 {
   left: 20px;
 }
 
+@media screen and (min-width: 1024px) {
+  .props-section {
+    margin: 50px 180px;
+  }
+  .props-section h3 {
+    padding: 0 0 25px 0;
+  }
+  .section_list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+  }
+  .list_number {
+    position: inherit;
+    margin-left: -10px;
+  }
+  .props_list {
+    margin-bottom: 0;
+  }
+}
 .restaurants-cards {
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   padding: 54px 18px 66px 17px;
 }
 .restaurants-cards h3 {
@@ -244,7 +287,7 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   color: #008766;
   font-size: 14px;
   border-radius: 2px;
@@ -263,11 +306,33 @@ h3 {
   padding: 0 0 12px 13px;
 }
 
+@media screen and (min-width: 1024px) {
+  .restaurants-cards {
+    padding: 30px 180px;
+  }
+  .restaurants-cards h3 {
+    padding: 0 0 28px 0;
+  }
+  .cards_body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px;
+  }
+  .cards_list {
+    width: 490px;
+    height: 251px;
+    margin-bottom: 0;
+  }
+  .cards_list .card_img {
+    width: 490px;
+  }
+}
 .loader {
   position: fixed;
   height: 100%;
   width: 100%;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   z-index: 1;
   display: flex;
   align-items: center;
@@ -275,7 +340,7 @@ h3 {
   animation: loader-screen 4s forwards;
 }
 .loader .loader_spinner {
-  border: 5px solid #9356DC;
+  border: 5px solid #9356dc;
   width: 60px;
   height: 60px;
   border-top-color: black;
@@ -320,7 +385,7 @@ h3 {
 .menu .content_menu {
   position: relative;
   border-radius: 40px 40px 0 0;
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   margin-top: -64px;
   padding: 31px 17px 40px 17px;
 }
@@ -334,11 +399,36 @@ h3 {
   height: 25px;
 }
 
+@media screen and (min-width: 1024px) {
+  .menu .banner_img {
+    height: 300px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .menu .content_menu {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -40px;
+  }
+  .menu .title_menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu .fa-regular.fa-heart {
+    right: 420px;
+    top: 34px;
+  }
+  .content_cards {
+    margin-left: 250px;
+  }
+}
 hr {
   width: 40px;
   height: 3px;
-  border-color: #99E2D0;
-  background-color: #99E2D0;
+  border-color: #99e2d0;
+  background-color: #99e2d0;
   border: 3px;
   margin-bottom: 12px;
 }
@@ -354,8 +444,8 @@ hr {
 
 .plates_cards {
   position: relative;
-  padding: 12px;
-  background: #FFF;
+  padding: 15px;
+  background: #fff;
   border-radius: 15px;
   margin-bottom: 15px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
@@ -369,25 +459,24 @@ hr {
   font-weight: 900;
   font-size: 18px;
   margin-bottom: 5px;
-  white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;
 }
 .plates_cards p {
   color: #101010;
   font-family: Roboto;
   font-weight: 300;
   font-size: 15px;
-  white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;
 }
 .plates_cards .plates_price {
   color: #101010;
   font-family: Roboto;
   display: flex;
   justify-content: flex-end;
-  margin-right: 15px;
   margin-top: -20px;
   font-size: 16px;
   font-weight: 700;
@@ -396,29 +485,20 @@ hr {
   display: none;
 }
 .plates_cards:hover .fa-solid.fa-circle-check {
-  position: absolute;
-  height: 100%;
   width: 65px;
-  border: 0;
+  height: 100%;
+  position: absolute;
   right: 0;
   top: 0;
-  background-color: #99E2D0;
-  color: #FFFFFF;
+  background-color: #99e2d0;
+  color: #ffffff;
   font-size: 20px;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  width: 59px;
-  height: 69px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition-duration: 0.5s;
-}
-
-.plates-cards {
-  position: relative;
-  overflow: hidden;
 }
 
 .plates_cards .check {
@@ -434,21 +514,11 @@ hr {
 }
 
 .plates_cards .check .fa-circle-check {
-  color: white;
-  transform: rotate(220deg);
   transition-duration: 0.6s;
-}
-
-.plates_cards:hover {
-  cursor: pointer;
 }
 
 .plates_cards:hover .check {
   right: 0;
-}
-
-.plates_cards:hover .fa-circle-check {
-  transform: rotate(0deg);
 }
 
 .plates_cards:hover strong {
@@ -466,7 +536,7 @@ hr {
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  color: #FFFFFF;
+  color: #ffffff;
   font-family: Roboto;
   font-weight: 500;
 }
@@ -476,4 +546,10 @@ hr {
   transition-duration: 0.25s;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356dc -5.2%, #ff79da 110.74%);
+}
+
+@media screen and (min-width: 1024px) {
+  .plates_cards {
+    width: 604px;
+  }
 }/*# sourceMappingURL=style.css.map */
