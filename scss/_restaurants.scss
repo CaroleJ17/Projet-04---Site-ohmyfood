@@ -55,7 +55,7 @@
 
 @include desktop {
   .restaurants-cards {
-    padding: 30px 180px;
+    padding: 30px 64px;
   }
 
   .restaurants-cards h3 {
@@ -66,16 +66,16 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 50px;
+    gap: 30px;
   }
 
   .cards_list {
-    width: 490px;
+    width: 430px;
     height: 251px;
     margin-bottom: 0;
   }
 
   .cards_list .card_img {
-    width: 490px;
+    width: 430px;
   }
 }

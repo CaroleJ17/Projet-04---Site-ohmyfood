@@ -54,7 +54,7 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  background-color: #9356dc;
+  background-color: $colorPrimary;
   color: $colorWhite;
   font-family: Roboto;
   border-radius: 50%;
@@ -65,7 +65,7 @@
 
 @include desktop {
   .props-section {
-    margin: 50px 180px;
+    margin: 50px 64px;
   }
 
   .props-section h3 {
@@ -85,6 +85,7 @@
   }
 
   .props_list {
+    width: 280px;
     margin-bottom: 0;
   }
 }
