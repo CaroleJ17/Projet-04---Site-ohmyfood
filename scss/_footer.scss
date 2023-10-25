@@ -33,6 +33,13 @@
   }
 }
 
+@include tablet {
+  .footer ul {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
 @include desktop {
   .footer {
     display: flex;

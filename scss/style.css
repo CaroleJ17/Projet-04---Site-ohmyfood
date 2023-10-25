@@ -48,6 +48,12 @@
   width: 25px;
 }
 
+@media screen and (min-width: 768px) {
+  .footer ul {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
 @media screen and (min-width: 1024px) {
   .footer {
     display: flex;
@@ -234,6 +240,22 @@ h3 {
   left: 20px;
 }
 
+@media screen and (min-width: 768px) {
+  .section_list {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .list_number {
+    box-sizing: inherit;
+  }
+  .cards_body {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+}
 @media screen and (min-width: 1024px) {
   .props-section {
     margin: 50px 64px;
@@ -403,31 +425,6 @@ h3 {
   height: 25px;
 }
 
-@media screen and (min-width: 1024px) {
-  .menu .banner_img {
-    height: 300px;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .menu .content_menu {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -40px;
-  }
-  .menu .title_menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .menu .fa-regular.fa-heart {
-    right: 240px;
-    top: 34px;
-  }
-  .content_cards {
-    margin-left: 92px;
-  }
-}
 hr {
   width: 40px;
   height: 3px;
@@ -466,6 +463,7 @@ hr {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  max-width: calc(100% - 100px);
 }
 .plates_cards p {
   color: #101010;
@@ -475,6 +473,7 @@ hr {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  max-width: calc(100% - 100px);
 }
 .plates_cards .plates_price {
   color: #101010;
@@ -529,6 +528,33 @@ hr {
   margin-right: 60px;
 }
 
+.animation_cards {
+  animation: appearance 1000ms;
+  animation-fill-mode: both;
+}
+
+.animation_entree {
+  animation-delay: 100ms;
+}
+
+.animation_dish {
+  animation-delay: 150ms;
+}
+
+.animation_dessert {
+  animation-delay: 200ms;
+}
+
+@keyframes appearance {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
 .button_menu {
   width: 186px;
   margin: 40px auto 0;
@@ -552,7 +578,35 @@ hr {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356dc -5.2%, #ff79da 110.74%);
 }
 
+@media screen and (min-width: 768px) {
+  .plates_cards {
+    flex-wrap: wrap;
+  }
+}
 @media screen and (min-width: 1024px) {
+  .banner_img {
+    height: 300px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .content_menu {
+    max-width: 1024px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .title_menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .fa-regular.fa-heart {
+    right: 240px;
+    top: 34px;
+  }
   .plates_cards {
     width: 604px;
   }

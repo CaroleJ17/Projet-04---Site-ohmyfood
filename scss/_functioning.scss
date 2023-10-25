@@ -63,6 +63,25 @@
   left: 20px;
 }
 
+@include tablet {
+  .section_list {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  .list_number {
+    box-sizing: inherit;
+  }
+
+  .cards_body {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+}
+
 @include desktop {
   .props-section {
     margin: 50px 64px;
