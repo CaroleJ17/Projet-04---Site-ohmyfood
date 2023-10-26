@@ -115,7 +115,7 @@ h3 {
   position: absolute;
   right: 25px;
   bottom: 30px;
-  font-size: 25px;
+  font-size: 21px;
 }
 
 .fa-regular.fa-heart:hover {
@@ -241,6 +241,9 @@ h3 {
 }
 
 @media screen and (min-width: 768px) {
+  .props-section h3 {
+    padding-left: 45px;
+  }
   .section_list {
     display: flex;
     justify-content: space-evenly;
@@ -264,18 +267,15 @@ h3 {
     padding: 0 0 25px 0;
   }
   .section_list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    align-items: center;
     padding: 0;
-  }
-  .list_number {
-    position: inherit;
-    margin-left: -10px;
   }
   .props_list {
     width: 280px;
     margin-bottom: 0;
+  }
+  .list_number {
+    visibility: hidden;
   }
 }
 .restaurants-cards {
@@ -283,7 +283,7 @@ h3 {
   padding: 54px 18px 66px 17px;
 }
 .restaurants-cards h3 {
-  padding: 0 80px 26px 20px;
+  padding: 0 80px 26px 0;
 }
 
 .cards_list {
@@ -329,6 +329,11 @@ h3 {
   padding: 0 0 12px 13px;
 }
 
+@media screen and (min-width: 768px) {
+  .restaurants-cards h3 {
+    padding-left: 20px;
+  }
+}
 @media screen and (min-width: 1024px) {
   .restaurants-cards {
     padding: 30px 64px;
@@ -337,9 +342,6 @@ h3 {
     padding: 0 0 28px 0;
   }
   .cards_body {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     gap: 30px;
   }
   .cards_list {
@@ -421,7 +423,7 @@ h3 {
 }
 .menu .fa-regular.fa-heart {
   top: 32px;
-  margin-right: 18px;
+  margin-right: 30px;
   height: 25px;
 }
 
@@ -602,10 +604,6 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .fa-regular.fa-heart {
-    right: 240px;
-    top: 34px;
   }
   .plates_cards {
     width: 604px;
