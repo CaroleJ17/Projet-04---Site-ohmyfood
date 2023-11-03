@@ -176,9 +176,22 @@ h3 {
   margin-bottom: 18px;
 }
 
+@media screen and (min-width: 768px) {
+  .restaurants h2 {
+    height: 47px;
+  }
+}
 @media screen and (min-width: 1024px) {
   .restaurants p {
     margin-bottom: 0;
+  }
+  .restaurants h2 {
+    height: 47px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .restaurants h2 {
+    height: 47px;
   }
 }
 .props-section {
@@ -230,27 +243,29 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
   background-color: #9356dc;
   color: #ffffff;
   font-family: Roboto;
   border-radius: 50%;
   height: 24px;
   width: 24px;
-  left: 20px;
+  margin-left: -12px;
 }
 
 @media screen and (min-width: 768px) {
+  .props-section {
+    width: 100%;
+    margin-bottom: 0;
+  }
   .props-section h3 {
-    padding-left: 45px;
+    padding-left: 40px;
   }
   .section_list {
+    width: 100%;
+    padding-left: 10px;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-  }
-  .list_number {
-    box-sizing: inherit;
   }
   .cards_body {
     display: flex;
@@ -261,29 +276,54 @@ h3 {
 }
 @media screen and (min-width: 1024px) {
   .props-section {
-    margin: 50px 64px;
+    width: auto;
+    margin: 50px 22px 0 52px;
   }
   .props-section h3 {
     padding: 0 0 25px 0;
   }
   .section_list {
-    align-items: center;
-    padding: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding-left: 10px;
   }
   .props_list {
     width: 280px;
     margin-bottom: 0;
+    margin-right: 30px;
   }
-  .list_number {
-    visibility: hidden;
+  .props_list .fa-solid {
+    margin: 0 10px 0 20px;
   }
 }
-.restaurants-cards {
+@media screen and (min-width: 1440px) {
+  .props-section {
+    width: auto;
+    display: flex;
+    margin: 50px 180px 0 180px;
+  }
+  .section_list {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  .props_list {
+    width: 322px;
+  }
+}
+.background {
   background-color: #f6f6f6;
-  padding: 54px 18px 66px 17px;
 }
-.restaurants-cards h3 {
-  padding: 0 80px 26px 0;
+
+.cards_body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h3 {
+  padding: 30px 80px 26px 20px;
 }
 
 .cards_list {
@@ -328,29 +368,70 @@ h3 {
   font-weight: 300;
   padding: 0 0 12px 13px;
 }
+.cards_list .card_info {
+  text-decoration: none;
+  color: #101010;
+}
 
 @media screen and (min-width: 768px) {
+  .cards_body {
+    flex-direction: row;
+  }
+  .restaurants-cards {
+    min-width: 768px;
+    width: 100%;
+    padding: 0;
+  }
   .restaurants-cards h3 {
-    padding-left: 20px;
+    padding: 18px 0 28px 30px;
   }
 }
 @media screen and (min-width: 1024px) {
   .restaurants-cards {
-    padding: 30px 64px;
+    margin-top: 50px;
   }
   .restaurants-cards h3 {
-    padding: 0 0 28px 0;
+    padding: 30px 0 28px 45px;
   }
   .cards_body {
+    max-width: 1024px;
+    width: 100%;
     gap: 30px;
   }
   .cards_list {
     width: 430px;
     height: 251px;
-    margin-bottom: 0;
+    margin-bottom: 20px;
   }
   .cards_list .card_img {
     width: 430px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .background {
+    width: 100%;
+  }
+  .cards_list {
+    width: 100%;
+  }
+  .restaurants-cards {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+  }
+  .restaurants-cards h3 {
+    padding-left: 180px;
+  }
+  .cards_list .card_img {
+    width: 490px;
+  }
+  .cards_body {
+    padding-left: 180px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 100px;
   }
 }
 .loader {
@@ -422,8 +503,10 @@ h3 {
   font-weight: 500;
 }
 .menu .fa-regular.fa-heart {
-  top: 32px;
-  margin-right: 30px;
+  position: absolute;
+  top: 35px;
+  margin-right: 24px;
+  width: 26px;
   height: 25px;
 }
 
@@ -515,7 +598,6 @@ hr {
   height: 100%;
   width: 65px;
   border-radius: 0 20px 20px 0;
-  transition-duration: 0.55s;
 }
 
 .plates_cards .check .fa-circle-check {
@@ -528,6 +610,7 @@ hr {
 
 .plates_cards:hover strong {
   margin-right: 60px;
+  transition-duration: 0.5s;
 }
 
 .animation_cards {
@@ -536,15 +619,15 @@ hr {
 }
 
 .animation_entree {
-  animation-delay: 100ms;
+  animation-delay: 0.25s;
 }
 
 .animation_dish {
-  animation-delay: 150ms;
+  animation-delay: 0.5s;
 }
 
 .animation_dessert {
-  animation-delay: 200ms;
+  animation-delay: 0.75s;
 }
 
 @keyframes appearance {
@@ -607,5 +690,11 @@ hr {
   }
   .plates_cards {
     width: 604px;
+  }
+  .menu .fa-regular.fa-heart {
+    position: absolute;
+    top: 35px;
+    margin-right: 250px;
+    height: 25px;
   }
 }/*# sourceMappingURL=style.css.map */

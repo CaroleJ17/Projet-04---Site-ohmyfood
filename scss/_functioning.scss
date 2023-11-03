@@ -53,29 +53,31 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
   background-color: $colorPrimary;
   color: $colorWhite;
   font-family: Roboto;
   border-radius: 50%;
   height: 24px;
   width: 24px;
-  left: 20px;
+  margin-left: -12px;
 }
 
 @include tablet {
+  .props-section {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
   .props-section h3 {
-    padding-left: 45px;
+    padding-left: 40px;
   }
 
   .section_list {
+    width: 100%;
+    padding-left: 10px;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-  }
-
-  .list_number {
-    box-sizing: inherit;
   }
 
   .cards_body {
@@ -88,7 +90,8 @@
 
 @include desktop {
   .props-section {
-    margin: 50px 64px;
+    width: auto;
+    margin: 50px 22px 0 52px;
   }
 
   .props-section h3 {
@@ -96,16 +99,37 @@
   }
 
   .section_list {
-    align-items: center;
-    padding: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding-left: 10px;
   }
 
   .props_list {
     width: 280px;
     margin-bottom: 0;
+    margin-right: 30px;
   }
 
-  .list_number {
-    visibility: hidden;
+  .props_list .fa-solid {
+    margin: 0 10px 0 20px;
+  }
+}
+
+@include large {
+  .props-section {
+    width: auto;
+    display: flex;
+    margin: 50px 180px 0 180px;
+  }
+
+  .section_list {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  .props_list {
+    width: 322px;
   }
 }

@@ -30,8 +30,10 @@
   }
 
   & .fa-regular.fa-heart {
-    top: 32px;
-    margin-right: 30px;
+    position: absolute;
+    top: 35px;
+    margin-right: 24px;
+    width: 26px;
     height: 25px;
   }
 }
@@ -131,7 +133,6 @@ hr {
   height: 100%;
   width: 65px;
   border-radius: 0 20px 20px 0;
-  transition-duration: 0.55s;
 }
 
 .plates_cards .check .fa-circle-check {
@@ -152,15 +153,15 @@ hr {
 }
 
 .animation_entree {
-  animation-delay: 100ms;
+  animation-delay: 0.25s;
 }
 
 .animation_dish {
-  animation-delay: 150ms;
+  animation-delay: 0.5s;
 }
 
 .animation_dessert {
-  animation-delay: 200ms;
+  animation-delay: 0.75s;
 }
 
 @keyframes appearance {
@@ -235,5 +236,12 @@ hr {
 
   .plates_cards {
     width: 604px;
+  }
+
+  .menu .fa-regular.fa-heart {
+    position: absolute;
+    top: 35px;
+    margin-right: 250px;
+    height: 25px;
   }
 }

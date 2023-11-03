@@ -1,10 +1,15 @@
-.restaurants-cards {
+.background {
   background-color: $bgGrey;
-  padding: 54px 18px 66px 17px;
+}
 
-  & h3 {
-    padding: 0 80px 26px 0;
-  }
+.cards_body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h3 {
+  padding: 30px 80px 26px 20px;
 }
 
 .cards_list {
@@ -51,33 +56,84 @@
     font-weight: 300;
     padding: 0 0 12px 13px;
   }
+
+  & .card_info {
+    text-decoration: none;
+    color: $colorBlack;
+  }
 }
 
 @include tablet {
-  .restaurants-cards h3 {
-    padding-left: 20px;
+  .cards_body {
+    flex-direction: row;
   }
-}
-@include desktop {
+
   .restaurants-cards {
-    padding: 30px 64px;
+    min-width: 768px;
+    width: 100%;
+    padding: 0;
   }
 
   .restaurants-cards h3 {
-    padding: 0 0 28px 0;
+    padding: 18px 0 28px 30px;
+  }
+}
+
+@include desktop {
+  .restaurants-cards {
+    margin-top: 50px;
+  }
+
+  .restaurants-cards h3 {
+    padding: 30px 0 28px 45px;
   }
 
   .cards_body {
+    max-width: 1024px;
+    width: 100%;
     gap: 30px;
   }
 
   .cards_list {
     width: 430px;
     height: 251px;
-    margin-bottom: 0;
+    margin-bottom: 20px;
   }
 
   .cards_list .card_img {
     width: 430px;
+  }
+}
+
+@include large {
+  .background {
+    width: 100%;
+  }
+
+  .cards_list {
+    width: 100%;
+  }
+
+  .restaurants-cards {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+  }
+
+  .restaurants-cards h3 {
+    padding-left: 180px;
+  }
+
+  .cards_list .card_img {
+    width: 490px;
+  }
+
+  .cards_body {
+    padding-left: 180px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 100px;
   }
 }

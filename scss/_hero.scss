@@ -25,8 +25,24 @@
   }
 }
 
+@include tablet {
+  .restaurants h2 {
+    height: 47px;
+  }
+}
+
 @include desktop {
   .restaurants p {
     margin-bottom: 0;
+  }
+
+  .restaurants h2 {
+    height: 47px;
+  }
+}
+
+@include large {
+  .restaurants h2 {
+    height: 47px;
   }
 }
