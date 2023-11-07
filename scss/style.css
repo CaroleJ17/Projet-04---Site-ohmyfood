@@ -598,9 +598,6 @@ hr {
   height: 100%;
   width: 65px;
   border-radius: 0 20px 20px 0;
-}
-
-.plates_cards .check .fa-circle-check {
   transition-duration: 0.6s;
 }
 
@@ -612,12 +609,16 @@ hr {
   margin-right: 60px;
 }
 
+.plates_cards strong {
+  transition-duration: 0.6s;
+}
+
 .animation_cards {
   animation: appearance 1000ms;
   animation-fill-mode: both;
 }
 
-.animation_entree {
+.animation_entrees {
   animation-delay: 0.25s;
 }
 
@@ -625,7 +626,7 @@ hr {
   animation-delay: 0.5s;
 }
 
-.animation_dessert {
+.animation_desserts {
   animation-delay: 0.75s;
 }
 
