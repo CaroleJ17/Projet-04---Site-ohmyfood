@@ -126,7 +126,8 @@
   .section_list {
     display: flex;
     flex-wrap: nowrap;
-    justify-content: center;
+    justify-content: flex-start;
+    gap: 18px;
   }
 
   .props_list {
