@@ -240,9 +240,12 @@ hr {
   }
 
   .menu .fa-regular.fa-heart {
-    position: absolute;
-    top: 35px;
     margin-right: 250px;
-    height: 25px;
+  }
+}
+
+@include large {
+  .menu .fa-regular.fa-heart {
+    margin-right: 370px;
   }
 }

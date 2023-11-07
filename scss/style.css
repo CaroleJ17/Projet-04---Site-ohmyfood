@@ -693,9 +693,11 @@ hr {
     width: 604px;
   }
   .menu .fa-regular.fa-heart {
-    position: absolute;
-    top: 35px;
     margin-right: 250px;
-    height: 25px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .menu .fa-regular.fa-heart {
+    margin-right: 370px;
   }
 }/*# sourceMappingURL=style.css.map */
