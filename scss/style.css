@@ -301,7 +301,7 @@ h3 {
   .props-section {
     width: auto;
     display: flex;
-    margin: 50px 180px 0 180px;
+    margin: 50px auto 0 auto;
   }
   .section_list {
     display: flex;
@@ -422,12 +422,15 @@ h3 {
     align-content: space-around;
   }
   .restaurants-cards h3 {
-    padding-left: 180px;
+    max-width: 1145px;
+    margin: auto;
   }
   .cards_list .card_img {
     width: 490px;
   }
   .cards_body {
+    max-width: 1280px;
+    margin: auto;
     padding-left: 180px;
     display: flex;
     flex-wrap: nowrap;
@@ -694,10 +697,5 @@ hr {
   }
   .menu .fa-regular.fa-heart {
     margin-right: 250px;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .menu .fa-regular.fa-heart {
-    margin-right: 370px;
   }
 }/*# sourceMappingURL=style.css.map */

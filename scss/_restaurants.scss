@@ -122,7 +122,8 @@ h3 {
   }
 
   .restaurants-cards h3 {
-    padding-left: 180px;
+    max-width: 1145px;
+    margin: auto;
   }
 
   .cards_list .card_img {
@@ -130,6 +131,8 @@ h3 {
   }
 
   .cards_body {
+    max-width: 1280px;
+    margin: auto;
     padding-left: 180px;
     display: flex;
     flex-wrap: nowrap;
